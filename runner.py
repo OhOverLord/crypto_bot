@@ -27,7 +27,7 @@ class Runner(commands.Bot):
 
 async def main():
     client = Runner()
-    await client.start('OTkxNzEzODA2NjIxMzU2MDcy.GTC-I1.fanB6K02SIplI5fl7PcdBFbF1jMbm6nKftzilY')
+    await client.start('OTkxNzEzODA2NjIxMzU2MDcy.GjY9qZ.N5o5I44sTbpoayr3PMCRU0qIaKyuaO9Q0rouhE')
 
 if __name__ == '__main__':
     asyncio.run(main())
