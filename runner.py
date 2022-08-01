@@ -1,10 +1,9 @@
 import asyncio
 import logging
-import os
 
 from cogwatch import watch
 from discord.ext import commands
-from dotenv import load_dotenv
+from settings import SECRET_KEY
 
 logging.basicConfig(level=logging.INFO)
 
@@ -27,7 +26,7 @@ class Runner(commands.Bot):
 
 async def main():
     client = Runner()
-    await client.start('OTkxNzEzODA2NjIxMzU2MDcy.GjY9qZ.N5o5I44sTbpoayr3PMCRU0qIaKyuaO9Q0rouhE')
+    await client.start(SECRET_KEY)
 
 if __name__ == '__main__':
     asyncio.run(main())

@@ -4,6 +4,7 @@ README_REF.md
 
 # JetBrains
 .idea/
+.env
 
 # VSCode
 .vscode
