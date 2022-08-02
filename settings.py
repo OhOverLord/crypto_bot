@@ -65,20 +65,20 @@ For participating in games and events you will get XP. The more points — the h
 """
 
 INFORMATION_CHATS = """
-#minto_updates — news about Minto
-#minto_faq — product faq 
-#minto_eco — environmental of Minto
-#minto_ed — educational publications
+<#981116499152502825> — news about Minto
+<#981116559743418368>  — product faq 
+<#981116609160691712> — environmental of Minto
+<#981116667683819520> — educational publications
 """
 
 COMMUNITY_CHATS = """
-#chat — for communication in general
-#offtop — for roles and bots
-#events-activities — announces and contests
-#memes — fun
-#minto_arena — for streams
-#sum_up — sample discussions from other channels in Discord
-#news — analysis of current news and events in the world of blockchain
+<#981116965974315019> — for communication in general
+<#981117018638016572> — for roles and bots
+<#981117055082315777> — announces and contests
+<#981117088095686686> — fun
+`#minto_arena` — for streams
+<#981118133202993152> — sample discussions from other channels in Discord#news — analysis of current news and events in the world of blockchain
+<#981117432410279966> — analysis of current news and events in the world of blockchain
 """
 
 CONTENT_CHATS = """
@@ -86,9 +86,26 @@ Two chat categories: community and information.
 """
 
 RULES_INFO = """
-1. Be respectful to each other's opinions. NO insults, racism or harassment please. 
-2. No one should ask you to send money to the account. Please contact our moderator immediately if this happens to you.
-3. Do not post any NSFW content and limit the use of offensive language across all channels and nicknames.
-4. We are free from all forms of advertising. Do not post referral links, discord invitations or any other invitations.
-5. Impersonating members of the moderator team is a crime. Anyone caught doing this will be banned immediately.
+``Rule 1`` **No disrespect**
+Be respectful to each other's opinions. NO insults, racism or harassment please. 
+
+``Rule 2`` **Scam**
+No one should ask you to send money to the account. Please contact our moderator immediately if this happens to you. 
+
+``Rule 3`` **No Inappropriate content**
+Do not post any NSFW content and limit the use of offensive language across all channels and nicknames.
+
+``Rule 4`` **No advertising**
+We are free from all forms of advertising. Do not post referral links, discord invitations or any other invitations.
+
+``Rule 5`` **Impersonating moderator team**
+Impersonating members of the moderator team is a crime. Anyone caught doing this will be banned immediately.
 """
+
+FAQ = {
+  1: ["When will BTCMT be listed on CEX?", "FAQ 1", "When will BTCMT be listed on CEX?\nWe are currently working on listing. We plan to list before 3-4Q 2022, but we don't have an exact date yet."],
+  2: ["When will BTCMT be listed on CEX?", "FAQ 1", "When will BTCMT be listed on CEX?\nWe are currently working on listing. We plan to list before 3-4Q 2022, but we don't have an exact date yet."],
+  3: ["When will BTCMT be listed on CEX?", "FAQ 1", "When will BTCMT be listed on CEX?\nWe are currently working on listing. We plan to list before 3-4Q 2022, but we don't have an exact date yet."],
+  4: ["When will BTCMT be listed on CEX?", "FAQ 1", "When will BTCMT be listed on CEX?\nWe are currently working on listing. We plan to list before 3-4Q 2022, but we don't have an exact date yet."],
+  5: ["When will BTCMT be listed on CEX?", "FAQ 1", "When will BTCMT be listed on CEX?\nWe are currently working on listing. We plan to list before 3-4Q 2022, but we don't have an exact date yet."],
+}
