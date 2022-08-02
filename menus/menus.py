@@ -1,8 +1,7 @@
-from http import client
 from discord.ext import commands
-from discord.utils import get
 from discord import Embed
 from discord_components import DiscordComponents, Button, ButtonStyle, Select, SelectOption
+import settings
 import discord
 
 
@@ -12,18 +11,8 @@ class MyWelcomeMenu(commands.Cog):
 
     @commands.command()
     async def welcome_menu(self, ctx):
-        description = """
-        Hey! We are Minto — a Bitcoin mining platform.
-
-        *Mining is simple. Don't you believe it? Try to mine with us!*
-
-        We've removed all the unnecessary steps. To mine BTC, all you need is to buy and stake our BTCMT token, that equals a unit of Bitcoin mining power. 
-        Our token is secured by actively operating equipment. To make it work **we use renewable energy sources with a neutral carbon footprint**. 
-
-        Visit our [website](https://minto.finance/) and learn more about our project!
-        """
         embed = Embed(title = 'Welcome to Minto Discord! :worried:', 
-                      description=description)
+                      description=settings.WELCOME_MENU_DESCRIPTION)
         components = [[
                 Button(style = ButtonStyle.URL, url = 'https://t.me/btcmtofficial', label='Telegram', emoji="😕"),
                 Button(style = ButtonStyle.URL, url = 'https://twitter.com/BTCMTOfficial', label='Twitter', emoji="👀"),
@@ -35,26 +24,39 @@ class MyInfoMenu(commands.Cog):
     def __init__(self, client):
         self.client = client
 
+    def roles_info_menu(self):
+        embed = discord.Embed(title=":scroll: Special roles", 
+                      description=settings.CONTENT_ROLES, 
+                      color=0x5bf1b9)
+        embed.add_field(name="1 level — <@MiTrainee>", value=settings.FIRST_LVL, inline=True)
+        embed.add_field(name="5 level — <@MiJunior>", value=settings.FIFTH_LVL, inline=True)
+        embed.add_field(name="10 level — <@MiMiddle>", value=settings.TENTH_LVL, inline=True)
+        embed.add_field(name="25 level — <@MiSenior>", value=settings.TWENTY_FIFTH_LVL, inline=True)
+        embed.add_field(name="55 level — <@MiLead>", value=settings.FIFTY_FIFTH_LVL, inline=True)
+        return embed
+    
+    def chats_info_menu(self):
+        embed = discord.Embed(title=":scroll: Chats", 
+                      description=settings.CONTENT_CHATS, 
+                      color=0x5bf1b9)
+        embed.add_field(name="Community", value=settings.COMMUNITY_CHATS, inline=True)
+        embed.add_field(name="Information", value=settings.INFORMATION_CHATS, inline=True)
+        return embed
+
+    def rules_info_menu(self):
+        embed = discord.Embed(title=":gift: RULES", 
+                      description=settings.RULES_INFO, 
+                      color=0x5bf1b9)
+        return embed
+        
+
     @commands.command()
     async def info_menu(self, ctx):
-        description = """
-        For additional questions or to contact us please write to @minto_support and we'll get back to you as soon as we can.
-        """
-        links = """
-        :globe_with_meridians: [Website](https://minto.finance/)
-        :placard: [Telegram](https://t.me/btcmtofficial)
-        :fingers_crossed: [Twitter](https://twitter.com/BTCMTOfficial)
-        """
-        information = """
-        Founded: 15 декабря 2020 г.
-        Owner: @gniro#0069
-        Invite: https://discord.gg/minto
-        """
         embed = Embed(title = '', 
                       url='https://minto.finance/about', 
-                      description=description, color=0x5bf1b9)
-        embed.add_field(name="Quick Links", value=links, inline=True)
-        embed.add_field(name="Information", value=information, inline=True)
+                      description=settings.INFO_MENU_DESCRIPTION, color=0x5bf1b9)
+        embed.add_field(name="Quick Links", value=settings.INFO_MENU_LINKS, inline=True)
+        embed.add_field(name="Information", value=settings.INFO_MENU_INFORMATION, inline=True)
         embed.add_field(name="Vote on Top.gg!", value="Use the dropdown one category at a time to avoid rate limits!", inline=False,)
         components = [[
                 Button(style = ButtonStyle.grey, label = 'Roles info', custom_id="bth_roles_info"),
@@ -62,71 +64,14 @@ class MyInfoMenu(commands.Cog):
                 Button(style = ButtonStyle.grey, label = 'Server rules', custom_id="bth_server_rules"),
         ]]
         await ctx.send(embed = embed, components = components)
-        content_roles = """
-        For participating in games and events you will get XP. The more points — the higher your level. .
-        With every level you will achieve a new role on this server, which will open up new possibilities. 
-
-        1 level — @MiTrainee 
-        • Welcome! 
-        • Access to Discord
-
-        5 level — @MiJunior 
-        • Change nickname 
-        • Add reactions 
-        • Custom emojis
-
-        10 level — @MiMiddle
-        • Special posting
-        
-        25 level — @MiSenior 
-        • Access to closed chat rooms 
-        • Access to voice chats
-
-        55 level — @MiLead
-        • Token rewards 
-        • Custom roles and emojis
-        • Our adoration♥️
-        """
-        content_chats = """
-        CHATS
-        Two chat categories: information and community.
-
-        Information
-        #minto_updates — news about Minto
-        #minto_faq — product faq 
-        #minto_eco — environmental of Minto
-        #minto_ed — educational publications
-
-        Community
-        #chat — for communication in general
-        #offtop — for roles and bots
-        #events-activities — announces and contests
-        #memes — fun
-        #minto_arena — for streams
-        #sum_up — sample discussions from other channels in Discord
-        #news — analysis of current news and events in the world of blockchain
-        """
-
-        rules_info = """
-        RULES
-        1. Be respectful to each other's opinions. NO insults, racism or harassment please. 
-
-        2. No one should ask you to send money to the account. Please contact our moderator immediately if this happens to you.
-
-        3. Do not post any NSFW content and limit the use of offensive language across all channels and nicknames.
-
-        4. We are free from all forms of advertising. Do not post referral links, discord invitations or any other invitations.
-
-        5. Impersonating members of the moderator team is a crime. Anyone caught doing this will be banned immediately.
-        """
         while True:
             response = await self.client.wait_for('button_click', check = lambda message: message.author == ctx.author)
             if response.component.custom_id == 'bth_roles_info':
-                await response.respond(content = content_roles)
+                await response.respond(embed=self.roles_info_menu(), ephemeral=True)
             elif response.component.custom_id == 'chats':
-                await response.respond(content = content_chats)
+                await response.respond(embed=self.chats_info_menu(), ephemeral=True)
             elif response.component.custom_id == 'bth_server_rules':
-                await response.respond(content = rules_info)
+                await response.respond(embed=self.rules_info_menu(), ephemeral=True)
 
 
 class MySelectMenu(commands.Cog):
