@@ -28,11 +28,11 @@ class MyInfoMenu(commands.Cog):
         embed = discord.Embed(title=":scroll: Special roles", 
                       description=settings.CONTENT_ROLES, 
                       color=0x5bf1b9)
-        embed.add_field(name="1 level — <@MiTrainee>", value=settings.FIRST_LVL, inline=True)
-        embed.add_field(name="5 level — <@MiJunior>", value=settings.FIFTH_LVL, inline=True)
-        embed.add_field(name="10 level — <@MiMiddle>", value=settings.TENTH_LVL, inline=True)
-        embed.add_field(name="25 level — <@MiSenior>", value=settings.TWENTY_FIFTH_LVL, inline=True)
-        embed.add_field(name="55 level — <@MiLead>", value=settings.FIFTY_FIFTH_LVL, inline=True)
+        embed.add_field(name="\u200b", value=settings.FIRST_LVL, inline=True)
+        embed.add_field(name="\u200b", value=settings.FIFTH_LVL, inline=True)
+        embed.add_field(name="\u200b", value=settings.TENTH_LVL, inline=True)
+        embed.add_field(name="\u200b", value=settings.TWENTY_FIFTH_LVL, inline=True)
+        embed.add_field(name="\u200b", value=settings.FIFTY_FIFTH_LVL, inline=True)
         return embed
     
     def chats_info_menu(self):
@@ -91,11 +91,17 @@ class MySelectMenu(commands.Cog):
             Select(
                 placeholder = "Select something!",
                 options = [
-                    SelectOption(label = "When will BTCMT be listed on CEX?", value = "A", description="FAQ 1"),
-                    SelectOption(label = "How many tokens were sold?", value = "B", description="FAQ 2"),
-                    SelectOption(label = "What's new this week?", value = "C", description="FAQ 3"),
-                    SelectOption(label = "What is Minto Finance?", value = "D", description="FAQ 4"),
-                    SelectOption(label = "How are you different from other projects?", value = "E", description="FAQ 5"),
+                    SelectOption(label = "When will BTCMT be listed on CEX?", value = "When will BTCMT be listed on CEX?", description="FAQ 1"),
+                    SelectOption(label = "How many tokens were sold?", value = "How many tokens were sold?", description="FAQ 2"),
+                    SelectOption(label = "What's new this week?", value = "What's new this week?", description="FAQ 3"),
+                    SelectOption(label = "What is Minto Finance?", value = "What is Minto Finance?", description="FAQ 4"),
+                    SelectOption(label = "How are you different from other projects?", value = "How are you different from other projects?", description="FAQ 5"),
+                    SelectOption(label = "What’s the total amount of tokens available for sale?", value = "What’s the total amount of tokens available for sale?", description="FAQ 6"),
+                    SelectOption(label = "Are there any pictures of the Karelia hydro mining site and the data center?", value = "Are there any pictures of the Karelia hydro mining site and the data center?", description="FAQ 7"),
+                    SelectOption(label = "Are there any plans to increase the hashrate per 100 tokens, like in other similar projects?", value = "Are there any plans to increase the hashrate per 100 tokens, like in other similar projects?", description="FAQ 8"),
+                    SelectOption(label = "If bitcoin generates a fork when we are mining, could we also get the coin of the Bitcoin fork?", value = "If bitcoin generates a fork when we are mining, could we also get the coin of the Bitcoin fork?", description="FAQ 9"),
+                    SelectOption(label = "Is HBTC or BTC on Heco the right blockchain to claim?", value = "Is HBTC or BTC on Heco the right blockchain to claim?", description="FAQ 10"),
+                    SelectOption(label = "Whom should I contact with marketing proposals?", value = "Whom should I contact with marketing proposals?", description="FAQ 11"),
                 ]
             )
         ]
@@ -104,16 +110,10 @@ class MySelectMenu(commands.Cog):
             response = await self.client.wait_for("select_option")
             if response.message.id == 891587821368905728: #Message id(not obligatory)
                 await response.respond(type=6)
-            if response.values[0] == "A":
-                await response.respond(embed=self.select_info_menu(title="When will BTCMT be listed on CEX?", description="We are currently working on listing. We plan to list before 3-4Q 2022, but we don't have an exact date yet."), ephemeral=True)
-            elif response.values[0] == "B":
-                await response.respond(embed=self.select_info_menu(title="How many tokens were sold?", description="You can find out how many tokens have been sold on our website or using our smart contract."), ephemeral=True)
-            elif response.values[0] == "C":
-                await response.respond(embed=self.select_info_menu(title="What's new this week?", description="You can find all the updates and news on our Telegram or Twitter pages."), ephemeral=True)
-            elif response.values[0] == "D":
-                await response.respond(embed=self.select_info_menu(title="What is Minto Finance?", description="The Minto token is backed by actively operating Bitcoin mining hardware. There are no high entry barriers, risks, or maintenance issues for the end user. You can buy tokens to receive rewards in the same way a miner does, or you can buy and sell mining power to make money, but you don't have to deal with the hassles of traditional mining."), ephemeral=True)
-            elif response.values[0] == "E":
-                await response.respond(embed=self.select_info_menu(title="How are you different from other projects?", description="We are very proud that our crypto project is eco-friendly. As you probably know, bitcoin mining consumes a lot of energy. Various other mining operations use electricity generated by burning coal, which is sourced from the power grid. We don't. Minto DeFi project uses only eco-friendly mining."), ephemeral=True)
+            try:
+                await response.respond(embed=self.select_info_menu(title=response.values[0], description=settings.FAQ[response.values[0]]), ephemeral=True)
+            except:
+                print("this question doesn't exist")
 
 
 def setup(client):
