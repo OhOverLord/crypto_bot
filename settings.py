@@ -35,7 +35,7 @@ Invite: https://discord.gg/minto
 """
 
 FIRST_LVL = """
-**1 level - <@&992069707974856856>**
+**1 level — <@&992069707974856856>**
 • Welcome! 
 • Access to Discord
 """
