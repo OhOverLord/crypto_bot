@@ -91,17 +91,16 @@ class MySelectMenu(commands.Cog):
             Select(
                 placeholder = "Select something!",
                 options = [
-                    SelectOption(label = "When will BTCMT be listed on CEX?", value = "When will BTCMT be listed on CEX?", description="FAQ 1"),
-                    SelectOption(label = "How many tokens were sold?", value = "How many tokens were sold?", description="FAQ 2"),
-                    SelectOption(label = "What's new this week?", value = "What's new this week?", description="FAQ 3"),
-                    SelectOption(label = "What is Minto Finance?", value = "What is Minto Finance?", description="FAQ 4"),
-                    SelectOption(label = "How are you different from other projects?", value = "How are you different from other projects?", description="FAQ 5"),
+                    SelectOption(label = "What is Minto Finance?", value = "What is Minto Finance?", description="FAQ 1"),
+                    SelectOption(label = "How are you different from other projects?", value = "How are you different from other projects?", description="FAQ 2"),
+                    SelectOption(label = "When will BTCMT be listed on CEX?", value = "When will BTCMT be listed on CEX?", description="FAQ 3"),
+                    SelectOption(label = "How many tokens were sold?", value = "How many tokens were sold?", description="FAQ 4"),
+                    SelectOption(label = "What's new this week?", value = "What's new this week?", description="FAQ 5"),
                     SelectOption(label = "What’s the total amount of tokens available for sale?", value = "What’s the total amount of tokens available for sale?", description="FAQ 6"),
                     SelectOption(label = "Are there any pictures of the Karelia hydro mining site and the data center?", value = "Are there any pictures of the Karelia hydro mining site and the data center?", description="FAQ 7"),
                     SelectOption(label = "Are there any plans to increase the hashrate per 100 tokens, like in other similar projects?", value = "Are there any plans to increase the hashrate per 100 tokens, like in other similar projects?", description="FAQ 8"),
                     SelectOption(label = "If bitcoin generates a fork when we are mining, could we also get the coin of the Bitcoin fork?", value = "If bitcoin generates a fork when we are mining, could we also get the coin of the Bitcoin fork?", description="FAQ 9"),
-                    SelectOption(label = "Is HBTC or BTC on Heco the right blockchain to claim?", value = "Is HBTC or BTC on Heco the right blockchain to claim?", description="FAQ 10"),
-                    SelectOption(label = "Whom should I contact with marketing proposals?", value = "Whom should I contact with marketing proposals?", description="FAQ 11"),
+                    SelectOption(label = "Whom should I contact with marketing proposals?", value = "Whom should I contact with marketing proposals?", description="FAQ 10"),
                 ]
             )
         ]

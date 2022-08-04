@@ -8,14 +8,11 @@ load_dotenv(dotenv_path)
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 WELCOME_MENU_DESCRIPTION = """
-Hey! We are Minto — a Bitcoin mining platform.
-
-*Mining is simple. Don't you believe it? Try to mine with us!*
-
-We've removed all the unnecessary steps. To mine BTC, all you need is to buy and stake our BTCMT token, that equals a unit of Bitcoin mining power. 
-Our token is secured by actively operating equipment. To make it work **we use renewable energy sources with a neutral carbon footprint**. 
-
-Visit our [website](https://minto.finance/) and learn more about our project!
+Hey! We are Minto — a Bitcoin mining platform.\n
+*Mining is simple. Don't you believe it? Try to mine with us!*\n
+We've removed all the unnecessary steps. To mine BTC, all you need is to buy and stake our BTCMT token, that equals a unit of Bitcoin mining power.\n
+Our token is secured by actively operating equipment. To make it work **we use renewable energy sources with a neutral carbon footprint**.\n
+Visit our [website](https://minto.finance/) and learn more about our project!\n
 """
 
 INFO_MENU_DESCRIPTION = """
@@ -121,6 +118,5 @@ FAQ = {
   "Are there any pictures of the Karelia hydro mining site and the data center?":"Watch the live feed from our data center in the Republic of Karelia via this [link](https://rtsp.me/embed/Y7FAt7aF/). And some pics [here](https://drive.google.com/drive/folders/1hLZp8WwgTHG0BmTlQzKmfgLmeiM6yWPi?usp=sharing). Look at this fantastic NY's Bloomberg [shot](https://mercury.bloomberg.com/images/382270225) from the Karelian data center.",
   "Are there any plans to increase the hashrate per 100 tokens, like in other similar projects?":"""Different projects can have similar features. For a better understanding of how BTCMT works, we recommend that you read our whitepaper. There is an option of increasing the emission and the tokenized hashrate of the projects. The emission depends on our vision of how to generate the maximum value for Minto token holders.""",
   "If bitcoin generates a fork when we are mining, could we also get the coin of the Bitcoin fork?":"""There are a lot of Bitcoin forks, but we don't mine them. The chance that the ETH/ETC scenario happens with the BTC network is minimal, so we'll just do our best to keep the long-term value of the token as high as possible.""",
-  "Is HBTC or BTC on Heco the right blockchain to claim?":"BTC and HBTC are different cryptocurrencies. HBTC on the HECO blockchain is the right one.",
   "Whom should I contact with marketing proposals?":"All offers can be sent to us by filling the form at this [link](https://form.typeform.com/to/ogEx7cA7?typeform-source=btcmt.typeform.com).",
 }
