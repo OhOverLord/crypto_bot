@@ -21,9 +21,9 @@ For additional questions or to contact us please write to <@981596992478269442> 
 """
 
 INFO_MENU_LINKS = """
-:globe_with_meridians: [Website](https://minto.finance/)
-:placard: [Telegram](https://t.me/btcmtofficial)
-:fingers_crossed: [Twitter](https://twitter.com/BTCMTOfficial)
+<:minto_token:1007563230849290400> [Website](https://minto.finance/)
+<:minto_telegram:1007563235861467166> [Telegram](https://t.me/btcmtofficial)
+<:minto_twitter:1007563233936293899> [Twitter](https://twitter.com/BTCMTOfficial)
 """
 
 INFO_MENU_INFORMATION = """
