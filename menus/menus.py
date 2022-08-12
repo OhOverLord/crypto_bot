@@ -20,6 +20,10 @@ class MyWelcomeMenu(commands.Cog):
         ]]
         await ctx.send(embed=  embed, components = components)
 
+    @commands.command()
+    async def welcome_img(self, ctx):
+        await ctx.send(file = discord.File("minto_main.png"))
+
 class MyInfoMenu(commands.Cog):
     def __init__(self, client):
         self.client = client
