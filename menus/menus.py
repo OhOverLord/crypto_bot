@@ -31,7 +31,7 @@ class MyInfoMenu(commands.Cog):
     def roles_info_menu(self):
         embed = discord.Embed(title=":scroll: Special roles", 
                       description=settings.CONTENT_ROLES, 
-                      color=0x37393d)
+                      color=0x36393E)
         embed.add_field(name="\u200b", value=settings.FIRST_LVL, inline=True)
         embed.add_field(name="\u200b", value=settings.FIFTH_LVL, inline=True)
         embed.add_field(name="\u200b", value=settings.TENTH_LVL, inline=True)
@@ -42,7 +42,7 @@ class MyInfoMenu(commands.Cog):
     def chats_info_menu(self):
         embed = discord.Embed(title=":scroll: Chats", 
                       description=settings.CONTENT_CHATS, 
-                      color=0x37393d)
+                      color=0x36393E)
         embed.add_field(name="Community", value=settings.COMMUNITY_CHATS, inline=True)
         embed.add_field(name="Information", value=settings.INFORMATION_CHATS, inline=True)
         return embed
@@ -50,7 +50,7 @@ class MyInfoMenu(commands.Cog):
     def rules_info_menu(self):
         embed = discord.Embed(title=":gift: RULES", 
                       description=settings.RULES_INFO, 
-                      color=0x37393d)
+                      color=0x36393E)
         return embed
         
 
@@ -85,7 +85,7 @@ class MySelectMenu(commands.Cog):
     def select_info_menu(self, title, description):
         embed = discord.Embed(title=title, 
                       description=description, 
-                      color=0x5bf1b9)
+                      color=0x36393E)
         return embed
 
     @commands.command()
