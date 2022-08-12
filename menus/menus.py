@@ -90,7 +90,7 @@ class MySelectMenu(commands.Cog):
 
     @commands.command()
     async def select_menu(self, ctx):
-        embed = Embed(title = 'Frequently Asked Questions', description="Select your question from the dropdown below to get an answer to! If your question isn't listed here, feel free to ask <@981596992478269442>")
+        embed = Embed(title = 'Frequently Asked Questions', description="Select your question from the dropdown below to get an answer to! If your question isn't listed here, feel free to ask <@981596992478269442>", color=0x37393d)
         components = [
             settings.OPTIONS
         ]
