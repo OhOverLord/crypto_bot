@@ -12,7 +12,7 @@ class MyWelcomeMenu(commands.Cog):
     @commands.command()
     async def welcome_menu(self, ctx):
         embed = Embed(title = 'Welcome to <:minto_logo:1007563227837780108> Minto Discord!', 
-                      description=settings.WELCOME_MENU_DESCRIPTION, color=0x37393d)
+                      description=settings.WELCOME_MENU_DESCRIPTION, color=0x36393E)
         components = [[
                 Button(style = ButtonStyle.URL, url = 'https://t.me/btcmtofficial', label='Telegram', emoji=self.client.get_emoji(1007563235861467166)),
                 Button(style = ButtonStyle.URL, url = 'https://twitter.com/BTCMTOfficial', label='Twitter', emoji=self.client.get_emoji(1007563233936293899)),
@@ -40,7 +40,7 @@ class MyInfoMenu(commands.Cog):
         return embed
     
     def chats_info_menu(self):
-        embed = discord.Embed(title="<:minto_person:1007563246351437854> Chats", 
+        embed = discord.Embed(title="<:minto_star:1007563229150588979> Chats", 
                       description=settings.CONTENT_CHATS, 
                       color=0x36393E)
         embed.add_field(name="Community", value=settings.COMMUNITY_CHATS, inline=True)
@@ -48,7 +48,7 @@ class MyInfoMenu(commands.Cog):
         return embed
 
     def rules_info_menu(self):
-        embed = discord.Embed(title="<:minto_person:1007563246351437854> RULES", 
+        embed = discord.Embed(title="<:minto_book:1007563226143264858> RULES", 
                       description=settings.RULES_INFO, 
                       color=0x36393E)
         return embed
@@ -61,7 +61,7 @@ class MyInfoMenu(commands.Cog):
                       description=settings.INFO_MENU_DESCRIPTION, color=0x54dac1)
         embed.add_field(name="Quick Links", value=settings.INFO_MENU_LINKS, inline=True)
         embed.add_field(name="Information", value=settings.INFO_MENU_INFORMATION, inline=True)
-        embed.add_field(name="Vote on Top.gg!", value="Use the dropdown one category at a time to avoid rate limits!", inline=False,)
+        embed.add_field(name="To Buy BTCMT", value="Follow this [link](https://minto.finance/purchase).", inline=False,)
         components = [[
                 Button(style = ButtonStyle.grey, label = 'Roles info', custom_id="bth_roles_info", emoji=self.client.get_emoji(1007563246351437854)),
                 Button(style = ButtonStyle.grey, label = 'Chats', custom_id="chats", emoji=self.client.get_emoji(1007563229150588979)),
@@ -85,7 +85,7 @@ class MySelectMenu(commands.Cog):
     def select_info_menu(self, title, description):
         embed = discord.Embed(title=title, 
                       description=description, 
-                      color=0x36393E)
+                      color=0x54dac1)
         return embed
 
     @commands.command()
