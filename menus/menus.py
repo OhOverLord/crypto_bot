@@ -85,12 +85,12 @@ class MySelectMenu(commands.Cog):
     def select_info_menu(self, title, description):
         embed = discord.Embed(title=title, 
                       description=description, 
-                      color=0x2b2d33)
+                      color=0x54dac1)
         return embed
 
     @commands.command()
     async def select_menu(self, ctx):
-        embed = Embed(title = 'Frequently Asked Questions', description="Select your question from the dropdown below to get an answer to! If your question isn't listed here, feel free to ask <@981596992478269442>", color=0x37393d)
+        embed = Embed(title = 'Frequently Asked Questions', description="Select your question from the dropdown below to get an answer to! If your question isn't listed here, feel free to ask <@981596992478269442>", color=0x2b2d33)
         components = [
             settings.OPTIONS
         ]
