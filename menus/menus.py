@@ -12,7 +12,7 @@ class MyWelcomeMenu(commands.Cog):
     @commands.command()
     async def welcome_menu(self, ctx):
         embed = Embed(title = 'Welcome to <:minto_logo:1007563227837780108> Minto Discord!', 
-                      description=settings.WELCOME_MENU_DESCRIPTION, color=0x2b2d33)
+                      description=settings.WELCOME_MENU_DESCRIPTION, color=0x2f3137)
         components = [[
                 Button(style = ButtonStyle.URL, url = 'https://t.me/btcmtofficial', label='Telegram', emoji=self.client.get_emoji(1007563235861467166)),
                 Button(style = ButtonStyle.URL, url = 'https://twitter.com/BTCMTOfficial', label='Twitter', emoji=self.client.get_emoji(1007563233936293899)),
@@ -58,7 +58,7 @@ class MyInfoMenu(commands.Cog):
     async def info_menu(self, ctx):
         embed = Embed(title = '', 
                       url='https://minto.finance/about', 
-                      description=settings.INFO_MENU_DESCRIPTION, color=0x2b2d33)
+                      description=settings.INFO_MENU_DESCRIPTION, color=0x2f3137)
         embed.add_field(name="Quick Links", value=settings.INFO_MENU_LINKS, inline=True)
         embed.add_field(name="Information", value=settings.INFO_MENU_INFORMATION, inline=True)
         embed.add_field(name="To Buy BTCMT", value="Follow this [link](https://minto.finance/purchase).", inline=False,)
@@ -90,7 +90,7 @@ class MySelectMenu(commands.Cog):
 
     @commands.command()
     async def select_menu(self, ctx):
-        embed = Embed(title = 'Frequently Asked Questions', description="Select your question from the dropdown below to get an answer to! If your question isn't listed here, feel free to ask <@981596992478269442>", color=0x2b2d33)
+        embed = Embed(title = 'Frequently Asked Questions', description="Select your question from the dropdown below to get an answer to! If your question isn't listed here, feel free to ask <@981596992478269442>", color=0x2f3137)
         components = [
             settings.OPTIONS
         ]
