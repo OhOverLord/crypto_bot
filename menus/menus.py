@@ -12,7 +12,7 @@ class MyWelcomeMenu(commands.Cog):
     @commands.command()
     async def welcome_menu(self, ctx):
         embed = Embed(title = 'Welcome to <:minto_logo:1007563227837780108> Minto Discord!', 
-                      description=settings.WELCOME_MENU_DESCRIPTION, color=0x36393E)
+                      description=settings.WELCOME_MENU_DESCRIPTION, color=0x2c2f33)
         components = [[
                 Button(style = ButtonStyle.URL, url = 'https://t.me/btcmtofficial', label='Telegram', emoji=self.client.get_emoji(1007563235861467166)),
                 Button(style = ButtonStyle.URL, url = 'https://twitter.com/BTCMTOfficial', label='Twitter', emoji=self.client.get_emoji(1007563233936293899)),
