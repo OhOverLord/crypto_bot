@@ -21,9 +21,9 @@ For additional questions or to contact us please write to <@981596992478269442> 
 """
 
 INFO_MENU_LINKS = """
-<:minto_token:1007563230849290400> [Website](https://minto.finance/)
-<:minto_telegram:1007563235861467166> [Telegram](https://t.me/btcmtofficial)
-<:minto_twitter:1007563233936293899> [Twitter](https://twitter.com/BTCMTOfficial)
+[Whitepaper](https://minto.finance/resources/MintoWhitepaper.pdf)
+[Hashrate watcher](https://www.f2pool.com/mining-user/06510a9d9d36f01fb7cbad861fb6c4cb)
+[Data center stream](https://rtsp.me/embed/Y7FAt7aF/)
 """
 
 INFO_MENU_INFORMATION = """

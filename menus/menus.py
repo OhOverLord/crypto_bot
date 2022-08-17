@@ -58,10 +58,10 @@ class MyInfoMenu(commands.Cog):
     async def info_menu(self, ctx):
         embed = Embed(title = '', 
                       url='https://minto.finance/about', 
-                      description=settings.INFO_MENU_DESCRIPTION, color=0x2f3137)
+                      description=settings.INFO_MENU_DESCRIPTION, color=0x54dac1)
         embed.add_field(name="Quick Links", value=settings.INFO_MENU_LINKS, inline=True)
         embed.add_field(name="Information", value=settings.INFO_MENU_INFORMATION, inline=True)
-        embed.add_field(name="To Buy BTCMT", value="Follow this [link](https://minto.finance/purchase).", inline=False,)
+        embed.add_field(name="To Buy BTCMT", value="Follow this [link](https://minto.finance/purchase) to our website or purchase on [PancakeSwap](https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059ff775485246999027b3197955&outputCurrency=0x410a56541bD912F9B60943fcB344f1E3D6F09567) exchange.", inline=False,)
         components = [[
                 Button(style = ButtonStyle.grey, label = 'Roles info', custom_id="bth_roles_info", emoji=self.client.get_emoji(1007563246351437854)),
                 Button(style = ButtonStyle.grey, label = 'Chats', custom_id="chats", emoji=self.client.get_emoji(1007563229150588979)),
