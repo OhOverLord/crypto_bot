@@ -4,7 +4,6 @@ import logging
 from cogwatch import watch
 from discord.ext import commands
 from settings import SECRET_KEY
-from webserver import keep_alive
 
 logging.basicConfig(level=logging.INFO)
 
@@ -26,7 +25,6 @@ class Runner(commands.Bot):
 
 
 async def main():
-    keep_alive()
     client = Runner()
     await client.start(SECRET_KEY)
 
