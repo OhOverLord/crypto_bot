@@ -24,9 +24,12 @@ class Runner(commands.Bot):
         await self.process_commands(message)
 
 
-async def main():
+async def main():    
     client = Runner()
     await client.start(SECRET_KEY)
-
+    
+    
 if __name__ == '__main__':
     asyncio.run(main())
+    while True:
+        asyncio.sleep(5)
