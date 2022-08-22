@@ -1,3 +1,4 @@
+from asyncio import sleep
 from discord.ext import commands
 from discord import Embed
 from discord_components import DiscordComponents, Button, ButtonStyle
@@ -69,6 +70,7 @@ class MyInfoMenu(commands.Cog):
         ]]
         await ctx.send(embed = embed, components = components)
         while True:
+            sleep(5)
             response = await self.client.wait_for('button_click', check = lambda message: message.author == ctx.author)
             if response.component.custom_id == 'bth_roles_info':
                 await response.respond(embed=self.roles_info_menu(), ephemeral=True)
@@ -96,6 +98,7 @@ class MySelectMenu(commands.Cog):
         ]
         await ctx.send(embed=embed, components=components)
         while True:
+            sleep(5)
             response = await self.client.wait_for("select_option")
             if response.message.id == 891587821368905728: #Message id(not obligatory)
                 await response.respond(type=6)

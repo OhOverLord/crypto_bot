@@ -31,5 +31,4 @@ async def main():
     
 if __name__ == '__main__':
     asyncio.run(main())
-    while True:
-        asyncio.sleep(5)
+
