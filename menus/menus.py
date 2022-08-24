@@ -31,7 +31,7 @@ class MyInfoMenu(commands.Cog):
     def roles_info_menu(self):
         embed = discord.Embed(title="<:minto_person:1007563246351437854> Special roles", 
                       description=settings.CONTENT_ROLES, 
-                      color=0x36393E)
+                      color=0x54dac1)
         embed.add_field(name="\u200b", value=settings.FIRST_LVL, inline=True)
         embed.add_field(name="\u200b", value=settings.FIFTH_LVL, inline=True)
         embed.add_field(name="\u200b", value=settings.TENTH_LVL, inline=True)
