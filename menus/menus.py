@@ -70,7 +70,9 @@ class MyInfoMenu(commands.Cog):
         await ctx.send(embed = embed, components = components)
         while True:
             response = await self.client.wait_for('button_click', check = lambda message: message.author == ctx.author)
-            if response.component.custom_id == 'bth_roles_info':
+            if response.message.id == 891587821368905728:
+                await response.respond(type=6)
+            elif response.component.custom_id == 'bth_roles_info':
                 await response.respond(embed=self.roles_info_menu(), ephemeral=True)
             elif response.component.custom_id == 'chats':
                 await response.respond(embed=self.chats_info_menu(), ephemeral=True)
