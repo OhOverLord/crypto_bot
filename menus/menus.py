@@ -42,7 +42,7 @@ class MyInfoMenu(commands.Cog):
     def chats_info_menu(self):
         embed = discord.Embed(title="<:minto_star:1007563229150588979> Chats", 
                       description=settings.CONTENT_CHATS, 
-                      color=0x36393E)
+                      color=0x54dac1)
         embed.add_field(name="Community", value=settings.COMMUNITY_CHATS, inline=True)
         embed.add_field(name="Information", value=settings.INFORMATION_CHATS, inline=True)
         return embed
@@ -50,7 +50,7 @@ class MyInfoMenu(commands.Cog):
     def rules_info_menu(self):
         embed = discord.Embed(title="<:minto_book:1007563226143264858> RULES", 
                       description=settings.RULES_INFO, 
-                      color=0x36393E)
+                      color=0x54dac1)
         return embed
         
 
