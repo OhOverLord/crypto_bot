@@ -17,7 +17,7 @@ Visit our [website](https://minto.finance/) and learn more about our project!\n
 """
 
 INFO_MENU_DESCRIPTION = """
-For additional questions or to contact us please write to <@981596992478269442> and we'll get back to you as soon as we can.
+For additional questions or to contact us please write to `@minto_support` and we'll get back to you as soon as we can.
 """
 
 INFO_MENU_LINKS = """
@@ -28,7 +28,7 @@ INFO_MENU_LINKS = """
 
 INFO_MENU_INFORMATION = """
 Founded: <t:1607990400:D>
-Owner: <@208632687227961344>
+Owner: `@Nick⛏`
 Invite: https://discord.gg/minto
 """
 
@@ -69,19 +69,20 @@ For participating in games and events you will get XP. The more points — the h
 
 INFORMATION_CHATS = """
 <#981116499152502825> — news about Minto
-<#981116559743418368>  — product faq 
+<#981116559743418368> — about the project
 <#981116609160691712> — environmental of Minto
 <#981116667683819520> — educational publications
+<#981117055082315777> — announces and contests
 """
 
 COMMUNITY_CHATS = """
 <#981116965974315019> — for communication in general
-<#981117018638016572> — for roles and bots
-<#981117055082315777> — announces and contests
-<#981117088095686686> — fun
+<#981117088095686686> — just for fun 
+<#998891000695107604> — for EXTRA fun
+<#981118133202993152> — for those who are just starting out in crypto
+<#981117432410279966> — current news and events in the world of blockchain
+<#1011559569157259334> — for bot commands only
 `#minto_arena` — for streams
-<#981118133202993152> — sample discussions from other channels in Discord
-<#981117432410279966> — analysis of current news and events in the world of blockchain
 """
 
 CONTENT_CHATS = """
