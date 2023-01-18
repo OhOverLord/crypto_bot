@@ -107,7 +107,7 @@ Impersonating members of the moderator team is a crime. Anyone caught doing this
 """
 
 FAQ = {
-  "When will BTCMT be listed on CEX?": "We are currently working on listing. We plan to list before 3-4Q 2022, but we don't have an exact date yet.",
+  "What is the BTCMT Token Contract Address?": "The address of the BTCMT token is 0x410a56541bd912f9b60943fcb344f1e3d6f09567.",
   "How many tokens were sold?": "You can find out how many tokens have been sold on our [website](https://minto.finance/) or using our [smart contract.](https://hecoinfo.com/token/0x410a56541bd912f9b60943fcb344f1e3d6f09567)",
   "What's new this week?": "You can find all the updates and news on our [Telegram](https://t.me/btcmtofficial) or [Twitter](https://twitter.com/btcmtofficial) pages.",
   "What is Minto Finance?": """The Minto token is backed by actively operating Bitcoin mining hardware. There are no high entry barriers, risks, or maintenance issues for the end user. You can buy tokens to receive rewards in the same way a miner does, or you can buy and sell mining power to make money, but you don't have to deal with the hassles of traditional mining.""",
@@ -128,7 +128,7 @@ OPTIONS = Select(
                 options = [
                     SelectOption(label = "What is Minto Finance?", value = "What is Minto Finance?", description="FAQ 1"),
                     SelectOption(label = "How are you different from other projects?", value = "How are you different from other projects?", description="FAQ 2"),
-                    SelectOption(label = "When will BTCMT be listed on CEX?", value = "When will BTCMT be listed on CEX?", description="FAQ 3"),
+                    SelectOption(label = "What is the BTCMT Token Contract Address?", value = "What is the BTCMT Token Contract Address?", description="FAQ 3"),
                     SelectOption(label = "How many tokens were sold?", value = "How many tokens were sold?", description="FAQ 4"),
                     SelectOption(label = "What's new this week?", value = "What's new this week?", description="FAQ 5"),
                     SelectOption(label = "What’s the total amount of tokens available for sale?", value = "What’s the total amount of tokens available for sale?", description="FAQ 6"),
